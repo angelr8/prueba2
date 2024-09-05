@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️To Sherlyn❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            color: #ff6666;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .message-container {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .heart-decor {
+            font-size: 3em;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💖 Quiero recordarte que 💖</h1>
+
+    <div class="heart-decor">💕💞💓</div>
+    <img id="penguin" src="https://img.freepik.com/vector-gratis/pinguino-lindo-sosteniendo-corazon-amor-icono-vectorial-dibujos-animados-ilustracion-icono-naturaleza-animal-aislado-plano_138676-13251.jpg?w=740&t=st=1725460831~exp=1725461431~hmac=e2d78a115413b96d86d7fb93d17c91d44661c783f8004d2c25f9d40546da9f17" alt="Pingno bonito"
+    width="200" height="200">
+    </br>
+    <div class="message-container" id="message">
+        Eres increíble mujer, nunca lo olvides.
+    </div>
+
+    
+    <button onclick="changeMessage()">Siguiente mensajito</button>
+
+    <script>
+        const messages = [
+            "Me encanta tenerte a mi lado",
+            "Quiero abrazarte muchisimo",
+            "ME gusta que te guste el pollito de kfc jajaja", 
+            "¿Cual es tu frappe favorito?🥴", 
+            "Te adoro muchisimoooooo ❤️"
+        ];
+        
+        let index = 0;
+        
+        function changeMessage() {
+            index = (index + 1) % messages.length;
+            document.getElementById("message").textContent = messages[index];
+        }
+    </script>
+
+</body>
+</html>
